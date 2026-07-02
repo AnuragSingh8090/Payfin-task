@@ -1,1 +1,415 @@
-<p>task-two works!</p>
+<header class="px-[15px] py-[10px] md:px-[27px] md:py-[20px] flex items-center justify-between">
+    <div class="text-[#5b5b5b] flex gap-1 md:gap-2 items-center flex-wrap text-[12px] md:text-[14px]">
+        <span class="cursor-pointer hover:text-[#845ef7] transition-colors duration-200">Contact Management</span>
+        <span class="flex items-center justify-center w-[22px] md:w-[24px]">
+            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%"
+                fill="currentColor">
+                <path d="m531.69-480-184-184L376-692.31 588.31-480 376-267.69 347.69-296l184-184Z" />
+            </svg>
+        </span>
+        <span class="text-[#5c5c5c] font-[600]">Profiles</span>
+    </div>
+</header>
+
+
+<section
+    class=" border-[#e7e5e5] bg-[#f0f5ff] border-[1px] flex flex-col overflow-hidden w-full rounded-tl-[20px] rounded-tr-[20px] md:rounded-tl-[29px] md:rounded-tr-[29px] h-[calc(100vh-47px)] md:h-[calc(100vh-72px)] mt-1 md:mt-2">
+
+    <header class="bg-white shadow-[0px_1px_8px_0px_#0000000a]">
+        <div
+            class="border-b border-[#e7e5e5] flex items-start md:items-center gap-2 py-[10px] md:pt-[18px] px-[15px] md:px-[27px]">
+            <button
+                class="flex items-center justify-center px-[2px] cursor-pointer transform translate-y-[4px] md:translate-y-0 focus:outline-[1px] py-[2px] md:py-[5px] rounded-[6px] border-[#845ef7] text-[#845ef7] border-[1px] active:scale-[0.95] bg-[white] transition duration-300 hover:bg-[#6e48de] hover:text-[white]">
+                <span class="flex items-center justify-center w-[25px] md:w-[32px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%"
+                        fill="currentColor">
+                        <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+                    </svg>
+                </span>
+            </button>
+            <div>
+                <h1 class="font-[600] text-[#444444] text-[18px] md:text-[21px]">Contact Management</h1>
+                <p class="text-[13px] md:text-[14px] text-[#5b5b5b] leading-[1.1] sm:leading-normal">
+                    Manage your contacts — add, edit, search, and remove profiles with full API integration.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 overflow-hidden flex flex-col lg:flex-row">
+
+        <!-- LEFT PANEL: Contact Form (50%) -->
+        <div class="w-full lg:w-1/2 overflow-auto border-b lg:border-b-0 lg:border-r border-[#e7e5e5] flex flex-col">
+            <div class="flex-1 overflow-auto px-[15px] md:px-[27px] py-[15px] md:py-[20px]">
+                <div class="bg-white rounded-[12px] py-[15px] md:py-[20px] px-[15px] md:px-[27px]">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
+                        <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">Add New Contact</h2>
+                    </div>
+
+                    <!-- Row 1: First Name & Last Name -->
+                    <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">First Name <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="text"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="Enter first name" />
+                        </div>
+
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Last Name <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="text"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="Enter last name" />
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Email & Age -->
+                    <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Email <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="email"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="example@email.com" />
+                        </div>
+
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Age <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="number"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="Enter age" />
+                            <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-normal text-[#a4a4a4]">Must be
+                                between 1 and 150</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 3: Gender & Mobile Number -->
+                    <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Gender <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <div class="w-full relative">
+                                <select
+                                    class="w-full px-[12px] py-[7px] md:px-[15px] md:py-[11px] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7] cursor-pointer appearance-none">
+                                    <option value="" disabled selected class="text-[#a4a4a4]">Select gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span
+                                    class="absolute right-[12px] top-[50%] transform translate-y-[-50%] text-[#a4a4a4] flex items-center justify-center w-[18px] pointer-events-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                        width="100%" fill="currentColor">
+                                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Mobile Number <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="text"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="Enter 10-digit mobile number" />
+                            <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-normal text-[#a4a4a4]">Must be
+                                exactly 10 digits</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 4: PAN & Aadhaar -->
+                    <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">PAN Number <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="text"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7] uppercase"
+                                placeholder="e.g. ABCDE1234F" />
+                            <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-normal text-[#a4a4a4]">Format:
+                                5 letters, 4 digits, 1 letter</p>
+                        </div>
+
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Aadhaar Number <span
+                                    class="text-[#e74c3c]">*</span></span>
+                            <input type="text"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                                placeholder="Enter 12-digit Aadhaar number" />
+                            <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-normal text-[#a4a4a4]">Must be
+                                exactly 12 digits</p>
+                        </div>
+                    </div>
+
+                    <!-- Row 5: Status & Created At -->
+                    <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Status</span>
+                            <div class="flex items-center gap-3 py-[6px] md:py-[8px]">
+                                <label class="inline-flex items-center cursor-pointer">
+                                    <div
+                                        class="w-10 h-[22px] rounded-full relative transition-colors duration-300 bg-[#845ef7]">
+                                        <div
+                                            class="w-[18px] h-[18px] rounded-full bg-white absolute top-0.5 transition-transform duration-300 left-0.5 translate-x-[18px]">
+                                        </div>
+                                    </div>
+                                </label>
+                                <span class="text-[13px] md:text-[14px] text-[#5c5c5c] font-[500]">Active</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex flex-col gap-1 w-full sm:w-1/2">
+                            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Created At</span>
+                            <input type="date"
+                                class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7] cursor-pointer" />
+                        </div>
+                    </div>
+
+                    <!-- Form Action Buttons -->
+                    <div class="flex gap-2 mt-5 justify-end flex-wrap">
+                        <button
+                            class="text-[13px] sm:text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-[#ffffff] focus:outline-[black] hover:bg-[#845ef721] transition duration-300 px-[16px] py-[7px] border-[#845ef7] text-[#845ef7] border-[1px] items-center">
+                            <span>Reset</span>
+                            <span class="w-[15px] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                    width="100%" fill="currentColor">
+                                    <path
+                                        d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <button
+                            class="text-[13px] md:text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-[#845ef7] focus:outline-[black] hover:bg-[#6e48de] transition duration-300 px-[16px] py-[7px] border-[#845ef7] text-[white] border-[1px] items-center">
+                            <span>Save Contact</span>
+                            <span class="w-[15px] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                    width="100%" fill="currentColor">
+                                    <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 overflow-hidden flex flex-col">
+            <div
+                class="bg-white px-[15px] md:px-[20px] py-[10px] md:py-[12px] flex flex-col gap-2 shadow-[0px_1px_8px_0px_#0000000a]">
+                <div class="flex items-center justify-between flex-wrap gap-2">
+                    <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">All Contacts</h2>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[12px] md:text-[13px] text-[#a4a4a4]">3 of 3</span>
+                        <button
+                            class="text-[12px] flex items-center gap-1 rounded-[6px] font-[500] cursor-pointer active:scale-[0.95] bg-[white] hover:bg-[#845ef711] transition duration-300 px-[10px] py-[4px] border-[#e7e5e5] border-[1px] text-[#5c5c5c]">
+                            <span class="w-[14px] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                    width="100%" fill="currentColor">
+                                    <path
+                                        d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-692v-108h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z" />
+                                </svg>
+                            </span>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-2 flex-wrap">
+                    <div class="flex gap-2 items-center">
+                        <button (click)="setFilter('all')"
+                            [class]="currentFilter === 'all'
+                                ? 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[#845ef7] text-[white]'
+                                : 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[white] border-[#e7e5e5] border-[1px] text-[#5c5c5c] hover:bg-[#845ef711]'">
+                            All
+                        </button>
+                        <button (click)="setFilter('active')"
+                            [class]="currentFilter === 'active'
+                                ? 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[#845ef7] text-[white]'
+                                : 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[white] border-[#e7e5e5] border-[1px] text-[#5c5c5c] hover:bg-[#845ef711]'">
+                            Active
+                        </button>
+                        <button (click)="setFilter('inactive')"
+                            [class]="currentFilter === 'inactive'
+                                ? 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[#845ef7] text-[white]'
+                                : 'text-[12px] sm:text-[13px] rounded-[20px] font-[500] cursor-pointer active:scale-[0.95] transition duration-300 px-[14px] py-[5px] bg-[white] border-[#e7e5e5] border-[1px] text-[#5c5c5c] hover:bg-[#845ef711]'">
+                            Inactive
+                        </button>
+                    </div>
+
+                    <div class="relative w-full sm:w-[350px]">
+                        <span
+                            class="absolute left-[10px] top-[50%] transform translate-y-[-50%] text-[#a4a4a4] flex items-center justify-center w-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%"
+                                fill="currentColor">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg>
+                        </span>
+                        <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="searchProfiles()"
+                            class="w-full pl-[30px] pr-[12px] py-[5px] md:py-[6px] placeholder:text-[#a4a4a4] text-[12px] md:text-[13px] text-[#444444] rounded-[7px] outline-none bg-transparent border-[#e7e5e5] border focus:border-[#845ef7]"
+                            placeholder="Search..." />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 overflow-auto px-[15px] md:px-[20px] py-[10px] md:py-[15px]">
+                <div class="space-y-2">
+                    @if(profilesLoading){
+                    @for(i of [1, 2, 3]; track i){
+                    <div
+                        class="animate-pulse bg-white rounded-[10px] px-[14px] py-[12px] border border-[#e7e5e5] space-y-3 mb-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 w-full">
+                                <div class="w-[32px] h-[32px] rounded-full bg-slate-200 flex-shrink-0"></div>
+                                <div class="space-y-2 w-1/3">
+                                    <div class="h-3 bg-slate-200 rounded w-5/6"></div>
+                                    <div class="h-2.5 bg-slate-200 rounded w-full"></div>
+                                </div>
+                            </div>
+                            <div class="h-5 bg-slate-200 rounded-full w-14"></div>
+                        </div>
+                        <div class="border-t border-[#f0f0f0] pt-2 flex flex-wrap gap-4">
+                            <div class="h-2 bg-slate-200 rounded w-10"></div>
+                            <div class="h-2 bg-slate-200 rounded w-12"></div>
+                            <div class="h-2 bg-slate-200 rounded w-16"></div>
+                            <div class="h-2 bg-slate-200 rounded w-14"></div>
+                            <div class="h-2 bg-slate-200 rounded w-20"></div>
+                        </div>
+                    </div>
+                    }
+                    }
+                    @else if (allProfiles && filteredProfiles.length > 0) {
+                    @for(profile of filteredProfiles; track profile.id){
+
+                    <div
+                        class="bg-white rounded-[10px] px-[14px] py-[12px] border border-[#e7e5e5] hover:border-[#845ef7] transition-all duration-200 cursor-default">
+                        <div class="flex items-center justify-between gap-2">
+                            <div class="flex items-center gap-2 min-w-0">
+                                <div
+                                    class="w-[32px] h-[32px] rounded-full bg-[#f0f5ff] flex items-center justify-center flex-shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960"
+                                        width="20px" fill="#845ef7">
+                                        <path
+                                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-240v-32q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q30 16 47 44.5t17 62.5v32q0 33-23.5 56.5T720-160H240q-33 0-56.5-23.5T160-240Z" />
+                                    </svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[13px] md:text-[14px] text-[#444444] font-[600] truncate">{{
+                                        profile.first_name ?
+                                        profile.first_name+ ' '+profile.last_name : "Not found"}}</p>
+                                    <p class="text-[11px] md:text-[12px] text-[#a4a4a4] truncate">{{
+                                        profile.emailId || "Not found" }}</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 flex-shrink-0">
+                                <span
+                                    [class]="(profile.status === true || profile.status === 'true')
+                                        ? 'text-[10px] md:text-[11px] font-[500] px-[8px] py-[2px] rounded-full bg-[#d4edda] text-[#155724]'
+                                        : 'text-[10px] md:text-[11px] font-[500] px-[8px] py-[2px] rounded-full bg-[#f8d7da] text-[#721c24]'">
+                                    {{ (profile.status === true || profile.status === 'true') ? 'Active' : 'Inactive' }}
+                                </span>
+                                <button
+                                    class="cursor-pointer p-[4px] rounded-[5px] text-[#5c5c5c] hover:bg-[#845ef711] hover:text-[#845ef7] transition duration-200 active:scale-[0.9] flex items-center justify-center w-[26px] h-[26px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                        width="100%" fill="currentColor">
+                                        <path
+                                            d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="cursor-pointer p-[4px] rounded-[5px] text-[#5c5c5c] hover:bg-[#fee2e2] hover:text-[#e74c3c] transition duration-200 active:scale-[0.9] flex items-center justify-center w-[26px] h-[26px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960"
+                                        width="100%" fill="currentColor">
+                                        <path
+                                            d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2 pt-2 border-t border-[#f0f0f0]">
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">Age:</span>
+                                <span class="text-[11px] text-[#5c5c5c] font-[500]">{{profile.age || "Not
+                                    found"}}</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">Gender:</span>
+                                <span class="text-[11px] text-[#5c5c5c] font-[500]">{{profile.gender || "Not
+                                    found"}}</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">Mobile:</span>
+                                <span class="text-[11px] text-[#5c5c5c] font-[500]">{{profile.mobilenumber || "Not
+                                    found"}}</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">PAN:</span>
+                                <span class="text-[11px] text-[#5c5c5c] font-[500] uppercase">{{profile.pan_no || "Not
+                                    found"}}</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">Aadhaar:</span>
+                                <span class="text-[11px] text-[#5c5c5c] font-[500]">{{profile.adhaar_no || "Not
+                                    found"}}</span>
+                            </div>
+                            <div class="flex gap-1 items-center">
+                                <span class="text-[11px] text-[#a4a4a4]">Created:</span>
+                                <span
+                                    class="text-[11px] text-[#5c5c5c] font-[500]">{{formatDate(profile.createdAt)}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    }
+
+                    }
+                    @else if (allProfiles && allProfiles.length === 0) {
+                    <div class="flex flex-col items-center justify-center py-12 px-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px"
+                            fill="#cbd5e1" class="mb-4">
+                            <path
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v400q0 33-23.5 56.5T800-160H160Zm0-80h640v-400H160v400Zm0-480h240l-80-80H160v80Zm0 0v80-80Zm280 240q0-17-11.5-28.5T400-520q-17 0-28.5 11.5T360-480q0 17 11.5 28.5T400-440q17 0 28.5-11.5T440-480Zm160-40H520v80h80v-80Zm-160 160q-50 0-85-35t-35-85h240q0 50-35 85t-85 35Z" />
+                        </svg>
+                        <h3 class="text-[15px] font-semibold text-[#5c5c5c] mb-1">No Profiles Found</h3>
+                        <p class="text-[13px] text-[#a4a4a4]">The contact book is empty. Please add a new contact
+                            profile.</p>
+                    </div>
+                    }
+                    @else if (allProfiles && filteredProfiles.length === 0) {
+                    <div class="flex flex-col items-center justify-center py-12 px-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px"
+                            fill="#cbd5e1" class="mb-4">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg>
+                        <h3 class="text-[15px] font-semibold text-[#5c5c5c] mb-1">No Search Results</h3>
+                        <p class="text-[13px] text-[#a4a4a4]">No contacts match your current search queries or status
+                            filters.</p>
+                    </div>
+                    }
+                    @else {
+                    <div class="flex flex-col items-center justify-center py-10 px-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px"
+                            fill="#f87171" class="mb-4">
+                            <path
+                                d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg>
+                        <h3 class="text-[15px] font-semibold text-[#ef4444] mb-1">Failed to Fetch Profiles</h3>
+                        <p class="text-[13px] text-[#a4a4a4] mb-4">An error occurred while loading the profiles from the
+                            server.</p>
+                        <button (click)="getAllProfiles()"
+                            class="text-[12px] font-semibold px-4 py-1.5 bg-[#845ef7] text-white rounded-full hover:bg-[#6e48de] transition duration-200 cursor-pointer active:scale-[0.95]">
+                            Try Again
+                        </button>
+                    </div>
+                    }
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</section>
