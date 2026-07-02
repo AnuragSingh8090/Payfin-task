@@ -1,8 +1,8 @@
-<section class="relative">
+<section class="dropdown-shell relative">
   <button
     [class.active]="showDropdown"
-    (click)="handleClick()"
-    class="bg-[#f3f3f3] dropdownBtn rounded-[5px] text-[14px] hover:brightness-95 outline-none active:scale-[0.95] transform duration-300 active:bg-(--primary) active:text-[white] px-1 text-[#a4a4a4] flex items-center justify-center pb-[2px] cursor-pointer"
+    (click)="handleClick($event)"
+    class="bg-[#f3f3f3] z-[5] dropdownBtn rounded-[5px] text-[14px] hover:brightness-95 outline-none active:scale-[0.95] transform duration-300 active:bg-(--primary) active:text-[white] px-1 text-[#a4a4a4] flex items-center justify-center pb-[2px] cursor-pointer"
   >
     {{ '{ }' }}
   </button>

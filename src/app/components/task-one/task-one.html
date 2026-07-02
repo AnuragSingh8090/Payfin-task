@@ -82,7 +82,11 @@
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'image-url'"
+              [isOpen]="activeDropdownId === 'image-url'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
         <p class="text-[13px] text-[#a4a4a4]">
@@ -104,7 +108,11 @@
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'video-url'"
+              [isOpen]="activeDropdownId === 'video-url'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
         <p class="text-[13px] text-[#a4a4a4]">
@@ -126,7 +134,11 @@
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'document-url'"
+              [isOpen]="activeDropdownId === 'document-url'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
         <p class="text-[13px] text-[#a4a4a4]">Link to supported file format: PDF up to 100MB.</p>
@@ -179,7 +191,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'variable-1'"
+              [isOpen]="activeDropdownId === 'variable-1'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>
@@ -198,7 +214,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'variable-2'"
+              [isOpen]="activeDropdownId === 'variable-2'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>
@@ -237,7 +257,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'payload-yes'"
+              [isOpen]="activeDropdownId === 'payload-yes'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>
@@ -272,7 +296,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'payload-no'"
+              [isOpen]="activeDropdownId === 'payload-no'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>
@@ -307,7 +335,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'payload-visit'"
+              [isOpen]="activeDropdownId === 'payload-visit'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>
@@ -342,7 +374,11 @@
             class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
           >
             <app-emoji-dropdown></app-emoji-dropdown>
-            <app-custom-dropdown></app-custom-dropdown>
+            <app-custom-dropdown
+              [dropdownId]="'payload-visit'"
+              [isOpen]="activeDropdownId === 'payload-visit'"
+              (dropdownToggled)="onDropdownToggle($event)"
+            ></app-custom-dropdown>
           </div>
         </div>
       </div>

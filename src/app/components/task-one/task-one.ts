@@ -8,4 +8,10 @@ import { EmojiDropdown } from '../emoji-dropdown/emoji-dropdown';
   templateUrl: './task-one.html',
   styleUrl: './task-one.css',
 })
-export class TaskOne {}
+export class TaskOne {
+  activeDropdownId: string | null = null;
+
+  onDropdownToggle(dropdownId: string | null): void {
+    this.activeDropdownId = dropdownId;
+  }
+}

@@ -1,6 +1,7 @@
 .customDropdown{
     box-shadow: 3px 8px 10px 0 #e1e5ed;
     animation: ease-animation 0.4s ease 1 forwards;
+    
 }
 
 @keyframes ease-animation {
