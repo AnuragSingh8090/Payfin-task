@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomDropdown } from '../custom-dropdown/custom-dropdown';
 import { EmojiDropdown } from '../emoji-dropdown/emoji-dropdown';
 
@@ -11,7 +12,13 @@ import { EmojiDropdown } from '../emoji-dropdown/emoji-dropdown';
 export class TaskOne {
   activeDropdownId: string | null = null;
 
+  constructor(private router: Router) {}
+
   onDropdownToggle(dropdownId: string | null): void {
     this.activeDropdownId = dropdownId;
+  }
+
+  goToTaskTwo(): void {
+    this.router.navigate(['/task2']);
   }
 }
