@@ -1,7 +1,7 @@
-<header class="px-[27px] py-[20px]">
-  <div class="text-[#5b5b5b] flex gap-2 items-center flex-wrap text-[14px]">
+<header class="px-[15px] py-[10px] md:px-[27px] md:py-[20px] flex items-center justify-between">
+  <div class="text-[#5b5b5b] flex gap-1 md:gap-2 items-center flex-wrap text-[12px] md:text-[14px]">
     <span>Send Marketing Message</span>
-    <span class="flex items-center justify-center w-[24px]"
+    <span class="flex items-center justify-center w-[22px] md:w-[24px]"
       ><svg
         xmlns="http://www.w3.org/2000/svg"
         height="100%"
@@ -16,16 +16,16 @@
 </header>
 
 <section
-  class="border-(--border-light) bg-[#f0f5ff] border-[1px] flex flex-col justify-between overflow-hidden w-full rounded-tl-[29px] rounded-tr-[29px] h-[calc(100vh-72px)] mt-2"
+  class="border-(--border-light) bg-[#f0f5ff] border-[1px] flex flex-col justify-between overflow-hidden w-full rounded-tl-[20px] rounded-tr-[20px] md:rounded-tl-[29px] md:rounded-tr-[29px] h-[calc(100vh-47px)] md:h-[calc(100vh-72px)] mt-1 md:mt-2"
 >
   <header class="bg-white shadow-bottom">
     <div
-      class="border-b border-(--border-light) flex items-center gap-2 py-[10px] pt-[18px] px-[27px]"
+      class="border-b border-(--border-light) flex items-start md:items-center gap-2 py-[10px] md:pt-[18px] px-[15px] md:px-[27px]"
     >
       <button
-        class="flex items-center justify-center px-[2px] cursor-pointer focus:outline-[1px] py-[5px] rounded-[6px] border-(--primary) text-(--primary) border-[1px] active:scale-[0.95] bg-[white] transform duration-300 hover:bg-(--primary_hover) hover:text-[white]"
+        class="flex items-center justify-center px-[2px] cursor-pointer transform translate-y-[4px] md:translate-y-0 focus:outline-[1px] py-[2px] md:py-[5px] rounded-[6px] border-(--primary) text-(--primary) border-[1px] active:scale-[0.95] bg-[white] transform duration-300 hover:bg-(--primary_hover) hover:text-[white]"
       >
-        <span class="flex items-center justify-center w-[32px]">
+        <span class="flex items-center justify-center w-[25px] md:w-[32px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="100%"
@@ -38,47 +38,55 @@
         </span>
       </button>
       <div>
-        <h1 class="font-[600] text-[#444444] text-[21px]">Customize Your Message</h1>
-        <p class="text-[14px] text-[#5b5b5b]">
+        <h1 class="font-[600] text-[#444444] text-[18px] md:text-[21px]">Customize Your Message</h1>
+        <p class="text-[13px] md:text-[14px] text-[#5b5b5b] leading-[1.1] sm:leading-normal">
           Fill in the required details based on your selected template complete the message setup.
         </p>
       </div>
     </div>
 
-    <div class="px-[27px] flex gap-7 py-[10px]">
-      <div class="flex flex-col">
+    <div
+      class="px-[15px] md:px-[27px] flex row-gap-2 flex-wrap gap-y-1 sm:gap-y-7 sm:gap-7 py-[8px] sm:py-[10px]"
+    >
+      <div class="flex flex-col w-1/2 sm:w-auto">
         <span class="text-[13px] text-[#5b5b5b]">Template Name</span>
-        <span class="text-[#5c5c5c] font-[600] text-[14px]">Diwali Sale</span>
+        <span class="text-[#5c5c5c] font-[600] text-[13px] sm:text-[14px]">Diwali Sale</span>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col w-1/2 sm:w-auto">
         <span class="text-[13px] text-[#5b5b5b]">Template ID</span>
-        <span class="text-[#5c5c5c] font-[600] text-[14px]">573829482930</span>
+        <span class="text-[#5c5c5c] font-[600] text-[13px] sm:text-[14px]">573829482930</span>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col w-1/2 sm:w-auto">
         <span class="text-[13px] text-[#5b5b5b]">Message Type</span>
-        <span class="text-[#5c5c5c] font-[600] text-[14px]">Text and Rich Media</span>
+        <span class="text-[#5c5c5c] font-[600] text-[13px] sm:text-[14px]"
+          >Text and Rich Media</span
+        >
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col w-1/2 sm:w-auto">
         <span class="text-[13px] text-[#5b5b5b]">Language</span>
-        <span class="text-[#5c5c5c] font-[600] text-[14px]">English</span>
+        <span class="text-[#5c5c5c] font-[600] text-[13px] sm:text-[14px]">English</span>
       </div>
     </div>
   </header>
 
-  <main class="flex-1 overflow-auto px-[27px] py-[25px] gap-3 flex flex-col">
-    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
-      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Header</h2>
+  <main
+    class="flex-1 overflow-auto px-[15px] md:px-[27px] py-[15px] md:py-[25px] gap-3 flex flex-col"
+  >
+    <div class="bg-white rounded-[12px] py-[15px] md:py-[20px] px-[15px] md:px-[27px]">
+      <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">Header</h2>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
-          <span class="text-[15px] text-[#5c5c5c] font-[600]">Image URL</span>
+          <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Image URL</span>
 
-          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+          <span class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]"
+            >0/2048</span
+          >
         </div>
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
@@ -89,22 +97,24 @@
             ></app-custom-dropdown>
           </div>
         </div>
-        <p class="text-[13px] text-[#a4a4a4]">
+        <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]">
           Link to supported file format: .jpg, .jpeg, .png, up to 5MB. Image may be cropped on
           certain devices. Recommended resolution: 1125 x 600 px.
         </p>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
-          <span class="text-[15px] text-[#5c5c5c] font-[600]">Video URL</span>
+          <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Video URL</span>
 
-          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+          <span class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]"
+            >0/2048</span
+          >
         </div>
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
@@ -115,22 +125,24 @@
             ></app-custom-dropdown>
           </div>
         </div>
-        <p class="text-[13px] text-[#a4a4a4]">
+        <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]">
           Link to supported file format: MP4 up to 16MB. Video may be cropped on certain devices.
           Recommended resolution: 1125 x 600 px.
         </p>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
-          <span class="text-[15px] text-[#5c5c5c] font-[600]">Document URL</span>
+          <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]">Document URL</span>
 
-          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+          <span class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]"
+            >0/2048</span
+          >
         </div>
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="http://"
           />
           <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
@@ -141,50 +153,63 @@
             ></app-custom-dropdown>
           </div>
         </div>
-        <p class="text-[13px] text-[#a4a4a4]">Link to supported file format: PDF up to 100MB.</p>
+        <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]">
+          Link to supported file format: PDF up to 100MB.
+        </p>
       </div>
 
-      <div class="flex gap-4">
-        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[330px]">
+      <div class="flex gap-3 md:gap-4">
+        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-1/2 md:w-[330px]">
           <div class="flex items-center justify-between flex-wrap">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">Location Latitude</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >Location Latitude</span
+            >
           </div>
           <div class="w-full relative">
             <input
               type="number"
-              class="w-full px-[15px] py-[10px] pe-[55px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+              class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
               placeholder="0"
             />
           </div>
-          <p class="text-[13px] text-[#a4a4a4]">Latitude can be any number between -90 and 90</p>
+          <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]">
+            Latitude can be any number between -90 and 90
+          </p>
         </div>
-        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[330px]">
+
+        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-1/2 md:w-[330px]">
           <div class="flex items-center justify-between flex-wrap">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">Location Longitude</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >Location Longitude</span
+            >
           </div>
           <div class="w-full relative">
             <input
               type="number"
-              class="w-full px-[15px] py-[10px] pe-[55px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+              class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
               placeholder="0"
             />
           </div>
-          <p class="text-[13px] text-[#a4a4a4]">Longitude can be any number between -180 and 180</p>
+          <p class="text-[12px] md:text-[13px] leading-[1.1] sm:leading-none text-[#a4a4a4]">
+            Longitude can be any number between -180 and 180
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
-      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Message</h2>
+    <div class="bg-white rounded-[12px] py-[15px] md:py-[20px] px-[15px] md:px-[27px]">
+      <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">Message</h2>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
-          <span class="text-[15px] text-[#5c5c5c] font-[600]">Variable {{"{{1}}"}}</span>
+          <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+            >Variable {{"{{1}}"}}</span
+          >
         </div>
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter variable content"
           />
           <div
@@ -200,14 +225,16 @@
         </div>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
-          <span class="text-[15px] text-[#5c5c5c] font-[600]">Variable {{"{{2}}"}}</span>
+          <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+            >Variable {{"{{2}}"}}</span
+          >
         </div>
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px:-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter variable content"
           />
           <div
@@ -224,13 +251,15 @@
       </div>
     </div>
 
-    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
-      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Buttons</h2>
+    <div class="bg-white rounded-[12px] py-[15px] md:py-[20px] px-[15px] md:px-[27px]">
+      <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">Buttons</h2>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
           <p class="flex gap-2 items-center">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Yes" button payload</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >"Yes" button payload</span
+            >
             <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +279,7 @@
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter the payload"
           />
           <div
@@ -266,10 +295,12 @@
         </div>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
           <p class="flex gap-2 items-center">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">"No" button payload</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >"No" button payload</span
+            >
             <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -289,7 +320,7 @@
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter the payload"
           />
           <div
@@ -305,10 +336,12 @@
         </div>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
           <p class="flex gap-2 items-center">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Unsubscribe!" button payload</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >"Unsubscribe!" button payload</span
+            >
             <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -328,7 +361,7 @@
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter the payload"
           />
           <div
@@ -344,10 +377,12 @@
         </div>
       </div>
 
-      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-full sm:w-[500px]">
         <div class="flex items-center justify-between flex-wrap">
           <p class="flex gap-2 items-center">
-            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Visit website" Url parameter</span>
+            <span class="text-[14px] md:text-[15px] text-[#5c5c5c] font-[600]"
+              >"Visit website" Url parameter</span
+            >
             <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -367,7 +402,7 @@
         <div class="w-full relative">
           <input
             type="text"
-            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            class="w-full px-[12px] py-[6px] md:px-[15px] md:py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[13px] md:text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
             placeholder="Enter the payload"
           />
           <div
@@ -385,12 +420,14 @@
     </div>
   </main>
 
-  <footer class="bg-white px-[27px] py-[12px] flex gap-2 justify-end items-center shadow-top">
+  <footer
+    class="bg-white px-[15px] sm:px-[27px] py-[9px] sm:py-[12px] flex gap-2 justify-end items-center shadow-top"
+  >
     <button
-      class="text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-[#ffffff] focus:outline-[black] hover:bg-[#845ef721] transform duration-300 px-[10px] w-[160px] justify-center items-center py-[6px] border-(--primary) text-(--primary) border-[1px]"
+      class="text-[14px] sm:text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-[#ffffff] focus:outline-[black] hover:bg-[#845ef721] transform duration-300 px-[10px] w-[50%] sm:w-[160px] justify-center items-center py-[6px] border-(--primary) text-(--primary) border-[1px]"
     >
       <Span>Cancel</Span>
-      <span class="w-[16px] flex items-center justify-center">
+      <span class="w-[17px] sm:w-[16px] flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="100%"
@@ -405,10 +442,10 @@
       </span>
     </button>
     <button
-      class="text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-(--primary) focus:outline-[black] hover:bg-(--primary_hover) transform duration-300 px-[10px] w-[160px] justify-center items-center py-[6px] border-(--primary) text-[white] border-[1px]"
+      class="text-[14px] md:text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-(--primary) focus:outline-[black] hover:bg-(--primary_hover) transform duration-300 px-[10px] w-[50%] sm:w-[160px] justify-center items-center py-[6px] border-(--primary) text-[white] border-[1px]"
     >
       <Span>Done Composing </Span>
-      <span class="w-[16px] flex items-center justify-center">
+      <span class="w-[17px] sm:w-[16px] flex items-center justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="100%"

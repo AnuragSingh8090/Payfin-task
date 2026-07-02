@@ -2,14 +2,14 @@
   <button
     [class.active]="showDropdown"
     (click)="handleClick($event)"
-    class="bg-[#f3f3f3] z-[5] dropdownBtn rounded-[5px] text-[14px] hover:brightness-95 outline-none active:scale-[0.95] transform duration-300 active:bg-(--primary) active:text-[white] px-1 text-[#a4a4a4] flex items-center justify-center pb-[2px] cursor-pointer"
+    class="bg-[#f3f3f3] z-[5] dropdownBtn rounded-[5px] text-[13px] md:text-[14px] hover:brightness-95 outline-none active:scale-[0.95] transform duration-300 active:bg-(--primary) active:text-[white] px-1 text-[#a4a4a4] flex items-center justify-center pb-[2px] cursor-pointer"
   >
     {{ '{ }' }}
   </button>
 
   @if (showDropdown) {
     <div
-      class="customDropdown absolute flex flex-col top-[calc(0%+43px)] overflow-hidden border border-[#d5d9e2] bg-white z-[99] rounded-[15px] w-[250px] h-[302px] left-[50%] transform translate-x-[-50%]"
+      class="customDropdown absolute flex flex-col top-[calc(0%+32px)] md:top-[calc(0%+43px)] overflow-hidden border border-[#d5d9e2] bg-white z-[99] rounded-[15px] w-[250px] h-[302px] left-[unset] right-0 md:right-[unset] md:left-[50%] transform translate-x-0 md:translate-x-[-50%]"
     >
       <div class="w-full p-3 pb-1">
         <div class="relative w-full">
