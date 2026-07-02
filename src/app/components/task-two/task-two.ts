@@ -1,6 +1,7 @@
 import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ContactService } from '../../services/contact.setvice';
 import { ContactDto } from '../../models/contat.dto';
 
@@ -13,6 +14,7 @@ import { ContactDto } from '../../models/contat.dto';
 export class TaskTwo {
   private contactService = inject(ContactService);
   private cdr = inject(ChangeDetectorRef);
+  private toastr = inject(ToastrService);
 
   allProfiles: ContactDto[] | null = null;
   filteredProfiles: ContactDto[] = [];
@@ -150,16 +152,12 @@ export class TaskTwo {
         this.profileIdToDelete = null;
         this.cdr.detectChanges();
         this.getAllProfiles();
-        setTimeout(() => {
-          alert('Profile deleted successfully');
-        }, 100);
+        this.toastr.success('Profile deleted successfully', 'Deleted');
       },
       error: (err) => {
         this.deleteLoading = false;
         this.cdr.detectChanges();
-        setTimeout(() => {
-          alert('Failed to delete profile');
-        }, 100);
+        this.toastr.error('Failed to delete profile', 'Error');
         console.error('Error deleting profile:', err);
       }
     });
@@ -391,12 +389,13 @@ export class TaskTwo {
         next: () => {
           this.saveLoading = false;
           this.showMobileForm = false;
+          this.toastr.success('Contact saved successfully', 'Success');
           this.resetForm();
           this.getAllProfiles();
         },
         error: (err) => {
           this.saveLoading = false;
-          alert('Failed to save contact');
+          this.toastr.error('Failed to save contact', 'Error');
           console.error(err);
         }
       });
@@ -406,12 +405,13 @@ export class TaskTwo {
           this.saveLoading = false;
           this.editingProfileId = null;
           this.showMobileForm = false;
+          this.toastr.success('Contact updated successfully', 'Success');
           this.resetForm();
           this.getAllProfiles();
         },
         error: (err) => {
           this.saveLoading = false;
-          alert('Failed to update contact');
+          this.toastr.error('Failed to update contact', 'Error');
           console.error(err);
         }
       });
