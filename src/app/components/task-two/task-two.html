@@ -18,7 +18,7 @@
     <header class="bg-white shadow-[0px_1px_8px_0px_#0000000a]">
         <div
             class="border-b border-[#e7e5e5] flex items-start md:items-center gap-2 py-[10px] md:pt-[18px] px-[15px] md:px-[27px]">
-            <button
+            <button routerLink="/"
                 class="flex items-center justify-center px-[2px] cursor-pointer transform translate-y-[4px] md:translate-y-0 focus:outline-[1px] py-[2px] md:py-[5px] rounded-[6px] border-[#845ef7] text-[#845ef7] border-[1px] active:scale-[0.95] bg-[white] transition duration-300 hover:bg-[#6e48de] hover:text-[white]">
                 <span class="flex items-center justify-center w-[25px] md:w-[32px]">
                     <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%"
@@ -39,14 +39,34 @@
     <main class="flex-1 overflow-hidden flex flex-col lg:flex-row">
 
 
-        <div class="w-full lg:w-1/2 overflow-auto border-b lg:border-b-0 lg:border-r border-[#e7e5e5] flex flex-col">
-            <div class="flex-1 overflow-auto px-[15px] md:px-[27px] py-[15px] md:py-[20px]">
-                <div class="bg-white rounded-[12px] py-[15px] md:py-[20px] px-[15px] md:px-[27px]">
-                    <div class="flex items-center justify-between flex-wrap gap-2">
-                        <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">
-                            {{ editingProfileId !== null ? 'Edit Contact' : 'Add New Contact' }}
-                        </h2>
-                    </div>
+        <div [class]="showMobileForm ? 'fixed inset-0 z-[100] flex items-end sm:items-center justify-center sm:p-4 lg:static lg:w-1/2 lg:flex lg:flex-col lg:border-r lg:border-[#e7e5e5]' : 'hidden lg:flex w-full lg:w-1/2 overflow-auto lg:border-r border-[#e7e5e5] flex-col'">
+            
+            @if (showMobileForm) {
+            <div class="absolute inset-0 bg-[rgba(0,0,0,0.4)] backdrop-blur-[2px] lg:hidden animate-fade-in" (click)="cancelEdit()"></div>
+            }
+
+            <div [class]="showMobileForm ? 'relative w-full sm:w-[500px] max-h-[92vh] bg-white lg:bg-transparent rounded-t-[24px] sm:rounded-[20px] lg:rounded-none flex flex-col overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.12)] lg:shadow-none lg:h-full lg:max-h-full lg:w-full animate-slide-up lg:animate-none' : 'flex-1 overflow-auto flex flex-col'">
+                
+                @if (showMobileForm) {
+                <div class="w-full flex justify-center pt-3 pb-1 lg:hidden bg-white shrink-0">
+                    <div class="w-12 h-1.5 bg-gray-300 rounded-full"></div>
+                </div>
+                }
+
+                <div class="flex-1 overflow-auto px-[18px] pb-[25px] pt-[5px] lg:px-[27px] lg:py-[20px]">
+                    <div class="lg:bg-white lg:rounded-[12px] lg:py-[20px] lg:px-[27px] flex flex-col h-full">
+                        <div class="flex items-center justify-between gap-2 pb-3 mb-4 lg:pb-0 lg:mb-0 lg:border-none border-b border-gray-100 shrink-0">
+                            <h2 class="font-[600] text-[16px] md:text-[15px] text-[#2c2c2c] lg:text-[#5c5c5c]">
+                                {{ editingProfileId !== null ? 'Edit Contact' : 'Add New Contact' }}
+                            </h2>
+                            @if (showMobileForm) {
+                            <button (click)="cancelEdit()" class="lg:hidden flex items-center justify-center p-1.5 rounded-full bg-gray-100 text-gray-500 hover:bg-red-50 hover:text-red-500 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+                                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                                </svg>
+                            </button>
+                            }
+                        </div>
 
 
                     <div class="flex gap-3 md:gap-4 flex-col sm:flex-row">
@@ -256,6 +276,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
         <div class="w-full lg:w-1/2 overflow-hidden flex flex-col">
             <div
@@ -263,7 +284,15 @@
                 <div class="flex items-center justify-between flex-wrap gap-2">
                     <h2 class="font-[600] text-[14px] md:text-[15px] text-[#5c5c5c]">All Contacts</h2>
                     <div class="flex items-center gap-2">
-                        <span class="text-[12px] md:text-[13px] text-[#a4a4a4]">3 of 3</span>
+                        <!-- Mobile Create Contact button -->
+                        <button (click)="showMobileForm = true"
+                            class="lg:hidden text-[12px] flex items-center gap-1 rounded-[6px] font-[500] cursor-pointer active:scale-[0.95] bg-[#845ef7] hover:bg-[#6e48de] transition duration-300 px-[10px] py-[4px] border-[#845ef7] border-[1px] text-[white]">
+                            <span class="w-[14px] flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 -960 960 960" width="100%" fill="currentColor"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
+                            </span>
+                            Create
+                        </button>
+                        <span class="text-[12px] md:text-[13px] text-[#a4a4a4]">{{filteredProfiles.length}} {{filteredProfiles.length === 1 ? 'Contact' : 'Contacts'}}</span>
                         <button (click)="getAllProfiles()"
                             class="text-[12px] flex items-center gap-1 rounded-[6px] font-[500] cursor-pointer active:scale-[0.95] bg-[white] hover:bg-[#845ef711] transition duration-300 px-[10px] py-[4px] border-[#e7e5e5] border-[1px] text-[#5c5c5c]">
                             <span class="w-[14px] flex items-center justify-center">

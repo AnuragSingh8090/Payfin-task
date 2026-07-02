@@ -1,11 +1,12 @@
 import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { ContactService } from '../../services/contact.setvice';
 import { ContactDto } from '../../models/contat.dto';
 
 @Component({
   selector: 'app-task-two',
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './task-two.html',
   styleUrl: './task-two.css',
 })
@@ -39,6 +40,7 @@ export class TaskTwo {
   };
   formErrors: { [key: string]: string } = {};
   saveLoading: boolean = false;
+  showMobileForm: boolean = false;
 
   setFilter(filter: 'all' | 'active' | 'inactive'): void {
     this.currentFilter = filter;
@@ -192,6 +194,7 @@ export class TaskTwo {
       }
     });
   }
+
   startEdit(profile: ContactDto): void {
     this.editingProfileId = Number(profile.id);
     this.formErrors = {};
@@ -208,11 +211,13 @@ export class TaskTwo {
       status: profile.status === true || profile.status === 'true',
       createdAt: this.formatDateForInput(profile.createdAt)
     };
+    this.showMobileForm = true;
     this.cdr.detectChanges();
   }
 
   cancelEdit(): void {
     this.editingProfileId = null;
+    this.showMobileForm = false;
     this.resetForm();
     this.cdr.detectChanges();
   }
@@ -385,6 +390,7 @@ export class TaskTwo {
       this.contactService.createProfile(this.contactForm).subscribe({
         next: () => {
           this.saveLoading = false;
+          this.showMobileForm = false;
           this.resetForm();
           this.getAllProfiles();
         },
@@ -399,6 +405,7 @@ export class TaskTwo {
         next: () => {
           this.saveLoading = false;
           this.editingProfileId = null;
+          this.showMobileForm = false;
           this.resetForm();
           this.getAllProfiles();
         },
