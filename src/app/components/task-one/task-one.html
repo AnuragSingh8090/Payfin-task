@@ -1,0 +1,388 @@
+<header class="px-[27px] py-[20px]">
+  <div class="text-[#5b5b5b] flex gap-2 items-center flex-wrap text-[14px]">
+    <span>Send Marketing Message</span>
+    <span class="flex items-center justify-center w-[24px]"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="100%"
+        viewBox="0 -960 960 960"
+        width="100%"
+        fill="currentColor"
+      >
+        <path d="m531.69-480-184-184L376-692.31 588.31-480 376-267.69 347.69-296l184-184Z" /></svg
+    ></span>
+    <span class="text-[#5c5c5c] font-[600]">Compose Message</span>
+  </div>
+</header>
+
+<section
+  class="border-(--border-light) bg-[#f0f5ff] border-[1px] flex flex-col justify-between overflow-hidden w-full rounded-tl-[29px] rounded-tr-[29px] h-[calc(100vh-72px)] mt-2"
+>
+  <header class="bg-white shadow-bottom">
+    <div
+      class="border-b border-(--border-light) flex items-center gap-2 py-[10px] pt-[18px] px-[27px]"
+    >
+      <button
+        class="flex items-center justify-center px-[2px] cursor-pointer focus:outline-[1px] py-[5px] rounded-[6px] border-(--primary) text-(--primary) border-[1px] active:scale-[0.95] bg-[white] transform duration-300 hover:bg-(--primary_hover) hover:text-[white]"
+      >
+        <span class="flex items-center justify-center w-[32px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="100%"
+            viewBox="0 -960 960 960"
+            width="100%"
+            fill="currentColor"
+          >
+            <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
+          </svg>
+        </span>
+      </button>
+      <div>
+        <h1 class="font-[600] text-[#444444] text-[21px]">Customize Your Message</h1>
+        <p class="text-[14px] text-[#5b5b5b]">
+          Fill in the required details based on your selected template complete the message setup.
+        </p>
+      </div>
+    </div>
+
+    <div class="px-[27px] flex gap-7 py-[10px]">
+      <div class="flex flex-col">
+        <span class="text-[13px] text-[#5b5b5b]">Template Name</span>
+        <span class="text-[#5c5c5c] font-[600] text-[14px]">Diwali Sale</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[13px] text-[#5b5b5b]">Template ID</span>
+        <span class="text-[#5c5c5c] font-[600] text-[14px]">573829482930</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[13px] text-[#5b5b5b]">Message Type</span>
+        <span class="text-[#5c5c5c] font-[600] text-[14px]">Text and Rich Media</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="text-[13px] text-[#5b5b5b]">Language</span>
+        <span class="text-[#5c5c5c] font-[600] text-[14px]">English</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 overflow-auto px-[27px] py-[25px] gap-3 flex flex-col">
+    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
+      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Header</h2>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <span class="text-[15px] text-[#5c5c5c] font-[600]">Image URL</span>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="http://"
+          />
+          <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+        <p class="text-[13px] text-[#a4a4a4]">
+          Link to supported file format: .jpg, .jpeg, .png, up to 5MB. Image may be cropped on
+          certain devices. Recommended resolution: 1125 x 600 px.
+        </p>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <span class="text-[15px] text-[#5c5c5c] font-[600]">Video URL</span>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="http://"
+          />
+          <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+        <p class="text-[13px] text-[#a4a4a4]">
+          Link to supported file format: MP4 up to 16MB. Video may be cropped on certain devices.
+          Recommended resolution: 1125 x 600 px.
+        </p>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <span class="text-[15px] text-[#5c5c5c] font-[600]">Document URL</span>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/2048</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[45px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="http://"
+          />
+          <div class="popup-container absolute right-[15px] top-[50%] transform translate-y-[-50%]">
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+        <p class="text-[13px] text-[#a4a4a4]">Link to supported file format: PDF up to 100MB.</p>
+      </div>
+
+      <div class="flex gap-4">
+        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[330px]">
+          <div class="flex items-center justify-between flex-wrap">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">Location Latitude</span>
+          </div>
+          <div class="w-full relative">
+            <input
+              type="number"
+              class="w-full px-[15px] py-[10px] pe-[55px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+              placeholder="0"
+            />
+          </div>
+          <p class="text-[13px] text-[#a4a4a4]">Latitude can be any number between -90 and 90</p>
+        </div>
+        <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[330px]">
+          <div class="flex items-center justify-between flex-wrap">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">Location Longitude</span>
+          </div>
+          <div class="w-full relative">
+            <input
+              type="number"
+              class="w-full px-[15px] py-[10px] pe-[55px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+              placeholder="0"
+            />
+          </div>
+          <p class="text-[13px] text-[#a4a4a4]">Longitude can be any number between -180 and 180</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
+      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Message</h2>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <span class="text-[15px] text-[#5c5c5c] font-[600]">Variable {{"{{1}}"}}</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter variable content"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <span class="text-[15px] text-[#5c5c5c] font-[600]">Variable {{"{{2}}"}}</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter variable content"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-[12px] py-[20px] px-[27px]">
+      <h2 class="font-[600] text-[15px] text-[#5c5c5c]">Buttons</h2>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <p class="flex gap-2 items-center">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Yes" button payload</span>
+            <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 -960 960 960"
+                width="100%"
+                fill="currentColor"
+              >
+                <path
+                  d="M450-290h60v-230h-60v230Zm52.92-307.75q9.39-9.29 9.39-23.02t-9.29-23.02q-9.29-9.28-23.02-9.28t-23.02 9.28q-9.29 9.29-9.29 23.02t9.39 23.02q9.38 9.29 22.92 9.29 13.54 0 22.92-9.29ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100Zm-.07-60q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+          </p>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/128</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter the payload"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <p class="flex gap-2 items-center">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">"No" button payload</span>
+            <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 -960 960 960"
+                width="100%"
+                fill="currentColor"
+              >
+                <path
+                  d="M450-290h60v-230h-60v230Zm52.92-307.75q9.39-9.29 9.39-23.02t-9.29-23.02q-9.29-9.28-23.02-9.28t-23.02 9.28q-9.29 9.29-9.29 23.02t9.39 23.02q9.38 9.29 22.92 9.29 13.54 0 22.92-9.29ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100Zm-.07-60q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+          </p>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/128</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter the payload"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <p class="flex gap-2 items-center">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Unsubscribe!" button payload</span>
+            <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 -960 960 960"
+                width="100%"
+                fill="currentColor"
+              >
+                <path
+                  d="M450-290h60v-230h-60v230Zm52.92-307.75q9.39-9.29 9.39-23.02t-9.29-23.02q-9.29-9.28-23.02-9.28t-23.02 9.28q-9.29 9.29-9.29 23.02t9.39 23.02q9.38 9.29 22.92 9.29 13.54 0 22.92-9.29ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100Zm-.07-60q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+          </p>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/128</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter the payload"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+
+      <div class="formInputWrapper mt-3 flex flex-col gap-1 w-[500px]">
+        <div class="flex items-center justify-between flex-wrap">
+          <p class="flex gap-2 items-center">
+            <span class="text-[15px] text-[#5c5c5c] font-[600]">"Visit website" Url parameter</span>
+            <span class="text-[#5c5c5c] cursor-pointer flex items-center justify-center w-[17px]"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="100%"
+                viewBox="0 -960 960 960"
+                width="100%"
+                fill="currentColor"
+              >
+                <path
+                  d="M450-290h60v-230h-60v230Zm52.92-307.75q9.39-9.29 9.39-23.02t-9.29-23.02q-9.29-9.28-23.02-9.28t-23.02 9.28q-9.29 9.29-9.29 23.02t9.39 23.02q9.38 9.29 22.92 9.29 13.54 0 22.92-9.29ZM480.07-100q-78.84 0-148.21-29.92t-120.68-81.21q-51.31-51.29-81.25-120.63Q100-401.1 100-479.93q0-78.84 29.92-148.21t81.21-120.68q51.29-51.31 120.63-81.25Q401.1-860 479.93-860q78.84 0 148.21 29.92t120.68 81.21q51.31 51.29 81.25 120.63Q860-558.9 860-480.07q0 78.84-29.92 148.21t-81.21 120.68q-51.29 51.31-120.63 81.25Q558.9-100 480.07-100Zm-.07-60q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                /></svg
+            ></span>
+          </p>
+
+          <span class="text-[13px] text-[#a4a4a4]">0/128</span>
+        </div>
+        <div class="w-full relative">
+          <input
+            type="text"
+            class="w-full px-[15px] py-[10px] pe-[74px] placeholder:text-[#a4a4a4] text-[14px] text-[#444444] rounded-[7px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Enter the payload"
+          />
+          <div
+            class="popup-container flex items-center justify-center gap-2 absolute right-[15px] top-[50%] transform translate-y-[-50%]"
+          >
+            <app-emoji-dropdown></app-emoji-dropdown>
+            <app-custom-dropdown></app-custom-dropdown>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white px-[27px] py-[12px] flex gap-2 justify-end items-center shadow-top">
+    <button
+      class="text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-[#ffffff] focus:outline-[black] hover:bg-[#845ef721] transform duration-300 px-[10px] w-[160px] justify-center items-center py-[6px] border-(--primary) text-(--primary) border-[1px]"
+    >
+      <Span>Cancel</Span>
+      <span class="w-[16px] flex items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="100%"
+          viewBox="0 -960 960 960"
+          width="100%"
+          fill="currentColor"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      class="text-[13px] flex gap-1 rounded-[25px] font-[500] cursor-pointer active:scale-[0.95] bg-(--primary) focus:outline-[black] hover:bg-(--primary_hover) transform duration-300 px-[10px] w-[160px] justify-center items-center py-[6px] border-(--primary) text-[white] border-[1px]"
+    >
+      <Span>Done Composing </Span>
+      <span class="w-[16px] flex items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="100%"
+          viewBox="0 -960 960 960"
+          width="100%"
+          fill="currentColor"
+        >
+          <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+        </svg>
+      </span>
+    </button>
+  </footer>
+</section>

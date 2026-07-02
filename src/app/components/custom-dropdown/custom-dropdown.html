@@ -1,0 +1,93 @@
+<section class="relative">
+  <button
+    [class.active]="showDropdown"
+    (click)="handleClick()"
+    class="bg-[#f3f3f3] dropdownBtn rounded-[5px] text-[14px] hover:brightness-95 outline-none active:scale-[0.95] transform duration-300 active:bg-(--primary) active:text-[white] px-1 text-[#a4a4a4] flex items-center justify-center pb-[2px] cursor-pointer"
+  >
+    {{ '{ }' }}
+  </button>
+
+  @if (showDropdown) {
+    <div
+      class="customDropdown absolute flex flex-col top-[calc(0%+43px)] overflow-hidden border border-[#d5d9e2] bg-white z-[99] rounded-[15px] w-[250px] h-[302px] left-[50%] transform translate-x-[-50%]"
+    >
+      <div class="w-full p-3 pb-1">
+        <div class="relative w-full">
+          <input
+            type="text"
+            class="w-full px-[10px] py-[6px] ps-[27px] placeholder:text-[#a4a4a4] text-[13px] text-[#444444] rounded-[4px] outline-none bg-transparent border-(--border-light) border focus:border-(--primary)"
+            placeholder="Search Standard Attributes"
+          />
+
+          <span
+            class="absolute top-[50%] left-[5px] transform translate-y-[-50%] flex items-center justify-center w-[20px] text-[#a4a4a4]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="100%"
+              viewBox="0 -960 960 960"
+              width="100%"
+              fill="currentColor"
+            >
+              <path
+                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="px-3 flex border-b border-(--border-light)">
+        <button
+          class="px-3 py-1 tab-switch active active:scale-[0.95] duration-300 bg-transparent border-b-2 border-transparent transform translate-y-[1px] text-[13px] text-[#a4a4a4] font-[600] cursor-pointer outline-none"
+        >
+          Standard
+        </button>
+
+        <button
+          class="px-3 py-1 tab-switch active:scale-[0.95] duration-300 bg-transparent border-b-2 border-transparent transform translate-y-[1px] text-[13px] text-[#a4a4a4] font-[600] cursor-pointer outline-none"
+        >
+          Custom
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-auto flex flex-col">
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> First Name
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> Last Name
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> Address
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> City
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> Country
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> Gender
+        </div>
+        <div
+          class="text-[13px] font-[500] flex items-center gap-1 text-[#a4a4a4] border-b border-(--border-light) px-3 py-2 cursor-pointer hover:brightness-95 hover:bg-[#fbfcffb8] duration-300 transform"
+        >
+          <span class="translate-y-[-1px]"> {{ '{ }' }}</span> State
+        </div>
+      </div>
+    </div>
+  }
+</section>

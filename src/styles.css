@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fbfcff;
+}
+
+:root{
+    --primary : #845ef7;
+    --primary_hover : #6e48de;
+    --border-light:#e7e5e5
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+button{
+    user-select: none;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
