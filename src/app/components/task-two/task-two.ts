@@ -2,6 +2,7 @@ import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { finalize } from 'rxjs/operators';
 import { ContactService } from '../../services/contact.setvice';
 import { ContactDto } from '../../models/contat.dto';
 
@@ -383,38 +384,49 @@ export class TaskTwo {
 
     this.contactForm.pan_no = this.contactForm.pan_no.toUpperCase().trim();
     this.saveLoading = true;
+    this.cdr.detectChanges();
 
     if (this.editingProfileId === null) {
-      this.contactService.createProfile(this.contactForm).subscribe({
-        next: () => {
-          this.saveLoading = false;
-          this.showMobileForm = false;
-          this.toastr.success('Contact saved successfully', 'Success');
-          this.resetForm();
-          this.getAllProfiles();
-        },
-        error: (err) => {
-          this.saveLoading = false;
-          this.toastr.error('Failed to save contact', 'Error');
-          console.error(err);
-        }
-      });
+      this.contactService.createProfile(this.contactForm)
+        .pipe(
+          finalize(() => {
+            this.saveLoading = false;
+            this.cdr.detectChanges();
+          })
+        )
+        .subscribe({
+          next: () => {
+            this.showMobileForm = false;
+            this.toastr.success('Contact saved successfully', 'Success');
+            this.resetForm();
+            this.getAllProfiles();
+          },
+          error: (err) => {
+            this.toastr.error('Failed to save contact', 'Error');
+            console.error(err);
+          }
+        });
     } else {
-      this.contactService.updateProfile(this.editingProfileId, this.contactForm).subscribe({
-        next: () => {
-          this.saveLoading = false;
-          this.editingProfileId = null;
-          this.showMobileForm = false;
-          this.toastr.success('Contact updated successfully', 'Success');
-          this.resetForm();
-          this.getAllProfiles();
-        },
-        error: (err) => {
-          this.saveLoading = false;
-          this.toastr.error('Failed to update contact', 'Error');
-          console.error(err);
-        }
-      });
+      this.contactService.updateProfile(this.editingProfileId, this.contactForm)
+        .pipe(
+          finalize(() => {
+            this.saveLoading = false;
+            this.cdr.detectChanges();
+          })
+        )
+        .subscribe({
+          next: () => {
+            this.editingProfileId = null;
+            this.showMobileForm = false;
+            this.toastr.success('Contact updated successfully', 'Success');
+            this.resetForm();
+            this.getAllProfiles();
+          },
+          error: (err) => {
+            this.toastr.error('Failed to update contact', 'Error');
+            console.error(err);
+          }
+        });
     }
   }
 
